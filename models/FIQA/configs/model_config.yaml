@@ -1,0 +1,26 @@
+
+
+model:
+  features:
+    module: models.FIQA.model.iresnet.iresnet100
+    weights: "./pretrained_models/r100.pth"
+    params:
+  head:
+    module: models.FIQA.model.mlp.MLP
+    params:
+  wrapper:
+    module: models.FIQA.model.ai_kd.WrapperModel
+  transform:
+    trans_1:
+      module: "torchvision.transforms.ToPILImage"
+    trans_2:
+      module: "torchvision.transforms.Resize"
+      params:
+        size: [112, 112]
+    trans_3:
+      module: "torchvision.transforms.ToTensor"
+    trans_4:
+      module: "torchvision.transforms.Normalize"
+      params: 
+        mean: [.5, .5, .5]
+        std: [.5, .5, .5]

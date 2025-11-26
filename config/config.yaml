@@ -1,0 +1,26 @@
+dir:
+  exp_dir: '/home/bour231/Desktop/gan_inversion/data_evaluation_inversion/data_landmarks_plus/'
+  output_dir: '/home/bour231/Desktop/gan_inversion/data_evaluation_inversion/data_landmarks_plus/results/'
+
+# general options
+options:
+  datasets: ["CelebA_Hq", "Feret", "FRL"]
+  image_size: 1024
+  save_merged_og_output: true #save merged orignal and inversed in one image + metrics for this example written on the merged image
+  std: true
+  multiple_id_datasets: './identity_data_info/info/' #files need to be named id_datasetName (ie id_CelebA_Hq, id_FRL) ###If empty FIC will be computer using an intra distance only between original image and reconstructed image and won't look for the closest with a similar identity
+  experiment_folder_name: 'inversion'
+
+# metrics option
+metrics:
+  mse: true
+  ssim: true
+  lpips: true
+  lfiq: true
+  fic_arcface: true
+  fic_swinface: true
+  fac: true
+
+#debug options
+debug:
+  #quick_test: 5 #instead of doing over the whole dataset, do on 5 images
