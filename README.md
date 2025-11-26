@@ -1,4 +1,4 @@
-# GAN Inversion Evaluation
+# Facial Generative methods Evaluation
 
 This repository provides methods to **evaluate GAN inversion and edition** across multiple dimensions, including **quality**, **identity**, and **facial attributes**.  
 
