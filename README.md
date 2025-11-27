@@ -154,7 +154,6 @@ The evaluation produces **three levels of outputs**:
 1. **Average results per experiment**  
 2. **Visualizations of original vs output images**  
 3. **Detailed per-image and per-attribute metrics**
-4. **FAC Results**
 
 ### 1. Results organization  
 
